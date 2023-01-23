@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+</head>
+<style>
+    * {
+
+        margin: 0;
+
+        padding: 0;
+
+        text-decoration: none;
+
+        list-style: none;
+
+    }
+
+    .header {
+        display: flex;
+        width: auto;
+        height: 36px;
+        padding: 0 38px 0 36px;
+        background-color: #f5f5f5;
+        align-items: center;
+        justify-content: space-between;
+    }
+.header ul {
+    display: flex;
+
+}
+.rightheader
+{
+    font-size: 12px;
+    display: flex;
+}
+.rightheader ul
+{
+
+}
+    .nav {
+        width: auto;
+        height: 60px;
+        background-color: #ffffff;
+        margin: 0 340px 0 340px;
+        text-align: center;
+    }
+
+    /*    如何设置浮动后 让ul里面的li居中
+     https://www.cnblogs.com/zempty/p/4298343.html
+
+     */
+    @media screen and (max-width: 1440px) {
+        .nav {
+            width: 0;
+            display: none;
+            text-align: center;
+
+        }
+
+        .fiveth {
+
+            margin: 40px 0 0 0;
+        }
+    }
+
+    .nav ul {
+
+        display: inline-block
+    }
+
+    .nav li {
+
+        line-height: 28px;
+        text-decoration: none solid rgb(17, 17, 17);
+        font-size: 16px;
+        float: left;
+        display: inline-block;
+        padding: 16px 12px 18px 12px;
+    }
+
+    .notice {
+        width: auto;
+        height: 28px;
+        text-align: center;
+        line-height: 24px;
+        font-size: 12px;
+
+
+    }
+
+    .main {
+        width: auto;
+
+    }
+
+    .poster img {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        display: block;
+        padding: 0 38px 0 36px;
+        /*在img中设置block margin才会生效居中*/
+    }
+
+    .Cw1 {
+        height: 88px;
+        line-height: 44px;
+        font-size: 32px;
+        text-align: center;
+        font-weight: 500;
+        font-family: "Microsoft YaHei UI", 雅黑, serif;
+
+    }
+
+    .Cw2 {
+        line-height: 24px;
+        text-align: center;
+        font-size: 16px;
+        font-family: "Microsoft YaHei UI", 雅黑, serif;
+        margin-top: 18px;
+    }
+
+    /*万能CSS如何设置div水平居中 https://www.php.cn/css-tutorial-473702.html#:~:text=CSS%E8%AE%BE%E7%BD%AEdiv%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9A1%E3%80%81%E7%BB%99div%E5%85%83%E7%B4%A0%E8%AE%BE%E7%BD%AE%E2%80%9Cmargin%3A%200%20auto%E2%80%9D%E6%A0%B7%E5%BC%8F%EF%BC%9B2%E3%80%81%E5%9C%A8%E7%88%B6%E7%BA%A7div%E5%85%83%E7%B4%A0%E9%87%8C%E8%AE%BE%E7%BD%AE%E2%80%9Ctext-align%3A%20center%E2%80%9D%E6%A0%B7%E5%BC%8F%EF%BC%8C%E5%9C%A8%E5%AD%90%E4%B8%80%E7%BA%A7div%E5%85%83%E7%B4%A0%E9%87%8C%E8%AE%BE%E7%BD%AE%E2%80%9Cdisplay%3A,inline-block%E2%80%9D%E6%A0%B7%E5%BC%8F%E3%80%82%20%E6%9C%AC%E6%95%99%E7%A8%8B%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83%EF%BC%9Awindows7%E7%B3%BB%E7%BB%9F%E3%80%81CSS3%26%26HTML5%E7%89%88%E3%80%81Dell%20G3%E7%94%B5%E8%84%91%E3%80%82%201%E3%80%81%E5%A4%96%E8%BE%B9%E8%B7%9D%E8%87%AA%E9%80%82%E5%BA%94*/
+    /*CSS设置div水平居中的方法：
+    第一种、给div元素设置“margin: 0 auto”样式；
+    第二种、 适用于内联元素 在父级div元素里设置“text-align: center”样式，在子一级div元素里设置“display: inline-block”样式。*/
+    .Cw3 {
+
+        text-align: center;
+        margin-top: 18px;
+        margin-bottom: 36px;
+    }
+
+    .Cw3 div {
+        padding: 6px 20px;
+        margin: 0 auto;
+        border-radius: 30px;
+        display: inline-block;
+        background: black;
+        color: white;
+
+    }
+
+    .second {
+
+        width: auto;
+        margin: 0 48px;
+        line-height: 28px;
+        font-size: 24px;
+
+    }
+
+    .second span {
+        margin-top: 60px;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .second .threepic {
+        /*给外部盒子一个flex即可实现均等分*/
+        display: flex;
+    }
+
+    .second .threepic img
+        /*    图片超出盒子*/
+    {
+        width: 32.5%;
+        margin-right: 17px;
+    }
+
+    .video {
+        margin-top: 30px;
+    }
+
+    .third {
+
+        margin: 40px 48px 0 48px;
+        display: flex;
+    }
+
+    .third img {
+        width: 49.4%;
+    }
+
+    .fouth {
+        width: auto;
+        margin: 0 48px;
+        line-height: 28px;
+        font-size: 24px;
+
+    }
+
+    .fouth img {
+        width: 100%;
+        display: flex;
+    }
+
+    .fouth span {
+        margin-top: 60px;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .fiveth {
+        margin: 40px 276px 0 276px;
+        padding: 0 20px;
+
+    }
+
+    @media screen and (max-width: 1440px) {
+
+        .fiveth {
+            text-align: center;
+            margin: 40px 0 0 0;
+        }
+    }
+
+    .fiveth .ul1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .fiveth .ul1 .li1 {
+
+        width: 20%;
+        display: flex;
+        margin-bottom: 48px;
+        flex-direction: column;
+    }
+
+    .li1 span {
+        margin-bottom: 24px;
+
+    }
+
+    .li1 ul li {
+        margin-top: 12px;
+        color: #cccccc;
+    }
+
+    .footer {
+        width: auto;
+        height: 327px;
+
+        padding: 40px 56px 0 56px;
+        background-color: black;
+
+    }
+
+    .footer .up .list
+        /*少使用ul因为会影响全局*/
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between
+
+    }
+
+    .up ul li span {
+
+        color: white;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    .up li {
+
+    }
+
+    .up li img {
+
+    }
+
+    .list2 {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+
+    }
+
+    .list3 li {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .gethelp {
+        height: 28px;
+        display: flex;
+        flex-direction: column;
+        line-height: 24px;
+        font-size: 14px;
+        color: #cccccc;
+
+    }
+
+    .gethelp li {
+        font-size: 12px;
+        line-height: 24px;
+        height: 28px;
+        margin: 3px 0;
+    }
+
+    .down {
+        margin-top: 110px;
+        height: 100px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .down span {
+        display: inline-block;
+
+    }
+
+</style>
+<body>
+<div class="header">
+    <ul>
+        <li><img src="./Image/体育-篮球.svg" alt=""></li>
+        
+        <li>
+            <img  src="./Image/匡威.svg" style=" padding-left: 10px;" alt="">
+        </li>
+    </ul>
+    <div class="rightheader">
+        <ul>
+            <li style="">帮助</li>
+            <li style="padding: 0 12px;">|</li>
+            <li>立即加入</li>
+            <li style="padding: 0 12px;">|</li>
+            <li>登录</li>
+        </ul>
+
+    </div>
+</div>
+<div class="nav">
+    <ul>
+        <li>新春开启 不改少年狂</li>
+        <li>新品尝鲜</li>
+        <li>男子</li>
+        <li>女子</li>
+        <li>儿童</li>
+        <li>专属定制</li>
+        <li>Jordan</li>
+    </ul>
+</div>
+<div class="notice">
+    尊敬的顾客，春节期间，发货与配送服务照常，您可放心选购。
+</div>
+<div class="main">
+    <div class="poster">
+        <img alt="" src="./Image/不改少年狂.png">
+    </div>
+    <div class="Cw1">
+        <br>
+        <!--        细节换行改行高-->
+        不改少年狂
+    </div>
+    <div class="Cw2">走？和李娜刘翔吃年夜饭去！</div>
+    <div class="Cw3">
+        <div>解锁「年跃新高」系列</div>
+    </div>
+
+    <img alt="" src="./Image/福利.png" style="width: 100%">
+    <div class="second"><span>新春热力穿搭</span>
+        <div class="threepic">
+            <img alt="" src="./Image/男子新春好物.png">
+            <img alt="" src="./Image/女子新春好物.png">
+            <img alt="" src="./Image/儿童新春好物.png">
+        </div>
+        <div class="video">
+            <div style="width: auto; height: 300px ;background-color: pink ;text-align: center "> 放视频的</div>
+            <div class="Cw1">
+                <br>
+                <!--        细节换行改行高-->
+                Nike Invincible 3｜全数感触，开跑见识
+            </div>
+            <div class="Cw2">强化 ZOOMX 缓震，为你的训练季助阵</div>
+            <div class="Cw3">
+                <div>即可探索</div>
+            </div>
+        </div>
+    </div>
+    <div class="second"><span>新禧贺春特辑</span>
+        <div class="threepic">
+            <img alt="" src="./Image/解锁阖家.png">
+            <img alt="" src="./Image/解锁加绒.png">
+            <img alt="" src="./Image/解锁红火新衣.png">
+        </div>
+
+    </div>
+    <div class="third">
+        <img alt="" src="./Image/解锁男子同款.png" style="margin-right: 15px;">
+        <img alt="" src="./Image/解锁女子同款.png">
+    </div>
+    <div class="second"><span>新年换新衣</span>
+        <div class="threepic">
+            <img alt="" src="./Image/解锁阖家.png">
+            <img alt="" src="./Image/解锁加绒.png">
+            <img alt="" src="./Image/解锁红火新衣.png">
+        </div>
+
+    </div>
+    <div class="second"><span>新年换新鞋</span>
+        <div class="threepic">
+            <img alt="" src="./Image/解锁阖家.png">
+            <img alt="" src="./Image/解锁加绒.png">
+            <img alt="" src="./Image/解锁红火新衣.png">
+        </div>
+
+    </div>
+    <div class="second"><span>新年运动打卡计划</span>
+        <div class="threepic">
+            <img alt="" src="./Image/解锁阖家.png">
+            <img alt="" src="./Image/解锁加绒.png">
+            <img alt="" src="./Image/解锁红火新衣.png">
+        </div>
+
+    </div>
+    <div class="fouth">
+
+        <span>Nike APP专属福利</span>
+        <img alt="" src="./Image/发售日历.png">
+
+    </div>
+    <div class="fiveth">
+        <ul class="ul1">
+            <li class="li1"><span>经典系列</span>
+                <ul>
+                    <li>AF1</li>
+                    <li>AJ1</li>
+                    <li>BLAZER</li>
+                    <li>老爹鞋</li>
+                </ul>
+
+            </li>
+            <li class="li1"><span>鞋类</span>
+                <ul>
+                    <li>AF1</li>
+                    <li>AJ1</li>
+                    <li>BLAZER</li>
+                    <li>老爹鞋</li>
+                </ul>
+            </li>
+            <li class="li1"><span>服装
+
+            </span>
+                <ul>
+                    <li>AF1</li>
+                    <li>AJ1</li>
+                    <li>BLAZER</li>
+                    <li>老爹鞋</li>
+                </ul>
+
+            </li>
+            <li class="li1"><span>配件
+            </span>
+                <ul>
+                    <li>AF1</li>
+                    <li>AJ1</li>
+                    <li>BLAZER</li>
+                    <li>老爹鞋</li>
+                </ul>
+
+            </li>
+            <li class="li1"><span>儿童</span>
+                <ul>
+                    <li>AF1</li>
+                    <li>AJ1</li>
+                    <li>BLAZER</li>
+                    <li>老爹鞋</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <div class="up">
+        <ul class="list">
+            <li class="list2"><span>电子礼品卡</span>
+                <ul class="list3">
+                    <li>企业团购</li>
+                    <li>注册Nike会员</li>
+                </ul>
+            </li>
+
+            <li><span>获得帮助</span>
+                <ul class="gethelp">
+                    <li>订单状态</li>
+                    <li>配送方式</li>
+                    <li>退换货</li>
+                    <li>付款选项</li>
+                    <li>联系我们</li>
+
+                </ul>
+            </li>
+
+            <li><span>关于Nike</span>
+                <ul class="gethelp">
+                    <li>订单状态</li>
+                    <li>配送方式</li>
+
+
+                </ul>
+
+
+            </li>
+            <li></li>
+            <li></li>
+
+            <li></li>
+
+            <li><img alt="" src="./Image/微信icon.png">
+                <img alt="" src="./Image/新浪微博.png"></li>
+        </ul>
+
+    </div>
+    <div class="down">
+        <img alt="" src="./Image/位置.png" style="padding-right: 16px; width: 12px">
+        <span style="color: white ;font-size: 12px">中国大陆</span>
+        <span style="font-size: 12px ;color: #bbbbbb ;padding-left: 16px">© 2023 Nike, Inc. 保留所有权利</span>
+    </div>
+</div>
+</body>
+</html>
